@@ -28,5 +28,28 @@
 .bottomContainer {
 	display: flex;
 	justify-content: space-between;
-	margin-top: auto;
+	margin-top: 207px;
+
+}
+
+.title {
+	font-family: 'Open Sans';
+	font-size: 31px;
+	font-weight: 800;
+	margin-block-end: 50px;
+	text-transform: uppercase;
+}
+
+.subtitle {
+	font-family: 'Open Sans';
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin-block-end: 4px;
+
+}
+
+.divider {
+	margin-block-end: 50px;
+	border-top: 1px solid #D7D7D7;
 }
