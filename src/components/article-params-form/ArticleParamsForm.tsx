@@ -16,6 +16,7 @@ import clsx from 'clsx';
 import styles from './ArticleParamsForm.module.scss';
 import { Select } from '../select';
 import { RadioGroup } from '../radio-group';
+import { Text } from '../text';
 
 type ArticleParamsFormProps = {
 	articleState: typeof defaultArticleState;
@@ -45,6 +46,7 @@ export const ArticleParamsForm = ({
 
 	const resetNewState = () => {
 		setArticleState(defaultArticleState);
+		setSelectedArticleState(defaultArticleState);
 	};
 
 	return (
@@ -54,9 +56,17 @@ export const ArticleParamsForm = ({
 				className={clsx(styles.container, isOpen && styles.container_open)}>
 				<div ref={rootRef}>
 					<form className={styles.form} onSubmit={handleArticleState}>
-						<h2 className={styles.title}>Задайте параметры</h2>
-						<h4 className={styles.subtitle}>Шрифт</h4>
+						<Text
+							as={'h2'}
+							size={31}
+							weight={800}
+							uppercase={true}
+							family={'open-sans'}>
+							Задайте параметры
+						</Text>
+						<div className={styles.titleDivider} />
 						<Select
+							title='Шрифт'
 							selected={selectedArticleState.fontFamilyOption}
 							options={fontFamilyOptions}
 							onChange={(selectedElement: OptionType) => {
@@ -79,8 +89,9 @@ export const ArticleParamsForm = ({
 							name='fontSize'
 							title='Размер шрифта'
 						/>
-						<h4 className={styles.subtitle}>Цвет шрифта</h4>
+
 						<Select
+							title='Цвет шрифта'
 							selected={selectedArticleState.fontColor}
 							options={fontColors}
 							onChange={(selectedElement: OptionType) => {
@@ -91,8 +102,9 @@ export const ArticleParamsForm = ({
 							}}
 						/>
 						<div className={styles.divider} />
-						<h4 className={styles.subtitle}>Цвет фона</h4>
+
 						<Select
+							title='Цвет фона'
 							selected={selectedArticleState.backgroundColor}
 							options={backgroundColors}
 							onChange={(selectedElement: OptionType) => {
@@ -102,8 +114,9 @@ export const ArticleParamsForm = ({
 								}));
 							}}
 						/>
-						<h4 className={styles.subtitle}>Ширина контента</h4>
+
 						<Select
+							title='Ширина контента'
 							selected={selectedArticleState.contentWidth}
 							options={contentWidthArr}
 							onChange={(selectedElement: OptionType) => {

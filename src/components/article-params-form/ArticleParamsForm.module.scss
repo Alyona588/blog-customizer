@@ -29,27 +29,13 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: 207px;
-
 }
 
-.title {
-	font-family: 'Open Sans';
-	font-size: 31px;
-	font-weight: 800;
+.titleDivider {
 	margin-block-end: 50px;
-	text-transform: uppercase;
-}
-
-.subtitle {
-	font-family: 'Open Sans';
-	font-size: 12px;
-	font-weight: 800;
-	text-transform: uppercase;
-	margin-block-end: 4px;
-
 }
 
 .divider {
 	margin-block-end: 50px;
-	border-top: 1px solid #D7D7D7;
+	border-top: 1px solid #d7d7d7;
 }
